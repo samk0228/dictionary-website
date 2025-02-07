@@ -34,14 +34,118 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 0;
+    padding: 20px 0;
     border-bottom: 1px solid rgb(24, 139, 64);
 }
 
 .wrapper .text-input {
-
+    display: flex;
+    border-bottom: 1px solid rgb(24, 139, 64);
 }
 
+.text-input .word {
+    border-radius: 5%;
+}
 
+.text-input .definition {
+    border-left: 1px solid rgb(24, 139, 64);
+}
 
+.text-input textarea {
+    border: none;
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    height: 250px;
+    background: none;
+}
 
+.text-input textarea::placeholder {
+    color: rgb(24, 139, 64);
+}
+
+.controls, li, .icons, .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 10px 100px;
+}
+
+.controls .row .icons {
+    width: 80px;
+    color: rgb(24, 139, 64);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.text-input textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(24, 139, 64);
+    border-radius: 8px;
+}
+
+.controls i:active {
+    transform: scale(0.9);
+}
+
+.container button {
+    background: rgb(24, 139, 64);
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    color: rgb(2, 29, 11);
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media (max-width: 660px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .wrapper .text-input {
+        flex-direction: column;
+    }
+
+    .text-input .definition {
+        border: 1px solid rgb(24, 139, 64);
+    }
+
+    .text-input textarea {
+        font-size: 16px;
+        height: 200px;
+    }
+
+    .text-input .word {
+        border-left: 1px solid rgb(24, 139, 64);
+
+    }
+
+    .controls .row .icons {
+        font-size: 16px;
+    }
+
+    .container button {
+        padding: 15px;
+        font-size: 16px;;\
+    }
+}
